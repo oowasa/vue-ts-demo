@@ -1,5 +1,5 @@
 <template>
-  <div class="home" @click="handleClick">
+  <div class="home">
     home...
   </div>
 </template>
@@ -9,20 +9,13 @@ import { Component, Vue } from "vue-property-decorator";
 @Component({
   components: {}
 })
-export default class Home extends Vue {
-  public created() {
-    console.log(process.env.NODE_ENV);
-    console.log(process.env.VUE_APP_ENV);
-  }
-  public handleClick() {
-    this.$router.push("/about");
-  }
-}
+export default class Home extends Vue {}
 </script>
 
-<style scoped lang="less">
+<style scoped lang="scss">
 .home {
-  width: 100%;
+  width: 740px;
   height: 100vh;
+  background: red;
 }
 </style>
